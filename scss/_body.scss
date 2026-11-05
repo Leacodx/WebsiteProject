@@ -1,0 +1,29 @@
+@mixin biggerbody {
+   @media screen and (min-width: 840px){
+       grid-auto-rows: auto 600px 370px auto ;
+
+    @content;
+
+}}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+body{
+ min-height: 100dvh;
+display: grid;
+grid-template-columns: 1fr;
+font-family: Roboto, system-ui, sans-serif;
+grid-auto-rows: auto;
+overflow-x: hidden;
+
+@include biggerbody {
+    grid-template-columns: minmax(3, 1fr);
+    font-family: Roboto, system-ui, sans-serif;
+    grid-auto-rows:  auto auto 1.2rem;
+    overflow-x: hidden;
+
+}
+}

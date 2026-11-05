@@ -1,0 +1,156 @@
+@mixin biggerr-cards{
+    @media screen and (min-width: 840px){
+
+        @content;}}
+
+
+
+.flexmain{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap:25px;
+    flex-wrap: wrap;
+}
+
+
+.facecard{
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
+    width: 100%;
+    @include biggerr-cards{
+        display: flex;
+        flex-direction: row;
+        grid-column: 1;
+        grid-row: 7;
+        width: 100%;
+        justify-self: center;
+        max-width: 60rem;
+        gap: 20px;
+
+    }
+
+    }
+
+
+
+.faceblockone{
+    display: grid;
+    grid-template-columns: 4rem auto;
+    gap: 4rem;
+    padding: 1rem;
+
+
+}
+
+.imageone {
+    grid-column: 1;
+     grid-row: 1;
+    width: 7rem;
+}
+
+.citeface{
+
+    grid-column: 2;
+     grid-row: 2
+}
+
+
+.faceblocktwo{
+    display: none;
+   @include biggerr-cards{
+       display: grid;
+       grid-template-columns: 4rem auto;
+       gap: 4rem;
+       padding: 1rem;
+   }
+}
+
+
+.cardsreview{
+list-style-type: none;
+padding: 0;
+width: 50%;
+display: flex;
+gap: 0.3rem;
+  margin-right: auto;}
+
+
+  & .stars{
+      height: 21px;
+      width: 22px;
+background-image: url(../images/Star\ 5.png);
+background-size: 1rem;
+background-repeat: no-repeat;
+  }
+
+
+  & .fullstars{
+      background-image: url(../images/Star\ 4.png);
+  }
+
+  & .smallcard{
+      width: 50%;
+      text-align: end;
+  }
+
+  & .cardbutton{
+      display: flex;
+      color: white;
+      background-color:#E3170A;
+      width: 12rem;
+      margin: 0;
+      padding: 0.3rem;
+      height: 2.4rem;
+      font-size: 1.2rem;
+      text-align: center;
+      place-content: center;
+      border-radius: 5px;
+  }
+
+  .photoblockone{
+      display: grid;
+       padding: 1rem;
+       gap: 2rem;
+          grid-column: 1 / -1;
+         grid-row: 10;
+        @include biggerr-cards{
+             display: grid;
+            place-content: center;
+            grid-area: 17/ 1 / 17 / 4;
+        }
+  }
+.photoimage{
+     width: 100%;
+    object-fit: contain;
+    @include biggerr-cards{
+       width: 61%;
+        object-fit: contain;
+    }
+}
+
+
+.photoarticle{
+  @include biggerr-cards{
+      display: flex;
+      flex-direction: row;
+      justify-items: end;
+  }
+}
+.photoarticlee{
+    @include biggerr-cards{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-items: end;
+        align-items: start;
+    }
+
+}
+
+.imagetwo{
+     width: 100%;
+      @include biggerr-cards{
+    width: 61%;
+      }
+}

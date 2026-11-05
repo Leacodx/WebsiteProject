@@ -1,0 +1,110 @@
+@mixin bigger-text{
+    @media screen and (min-width: 840px){
+        @content;}}
+
+
+
+@mixin buttonheaders {
+    display: grid;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.1rem;
+    text-align: center;
+    z-index: 1;
+    width: 220px;
+    font-size: 20px;
+    font-width: bold;
+    @content;
+
+}
+
+
+
+.buttonone{
+
+font-size: 1.4rem;
+@include buttonheaders { text-align: center;}
+
+    @include bigger-text{
+         background-color: #E3170A;
+        width: 27rem;
+        padding: 1.5rem;
+        font-size: 1.8rem;
+}
+}
+
+
+.buttontwo{
+    font-size: 1.4rem;
+    background-color: #8ACFE5;
+    @include buttonheaders { text-align: center;}
+        @include bigger-text{
+  width: 24rem;
+  padding: 1.5rem;
+    font-size: 1.8rem;
+
+    }
+}
+
+
+
+.buttonstoclickk{
+    grid-column: 1/-1;
+    display: flex;
+    grid-row: 7;
+    z-index: 2;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.4rem;
+    @include bigger-text{
+        display: flex;
+        grid-column: 1/ -1;
+         grid-row: 11;
+         padding: 5rem;
+          place-items: center;
+          margin-top: 2rems;
+          font-size: 2rem;
+    }
+}
+
+
+.blockbutton{
+    color: #8ACFE5 ;
+    border: 2px solid #8ACFE5;
+    background-color: #011827;
+    padding: 1rem;
+    width: 65%;
+    font-size: 1.4rem;
+    @include bigger-text{
+    color: #8ACFE5 ;
+    border: 2px solid #8ACFE5;
+    background-color: #011827;
+    padding: 1rem;
+    font-size: 2rem;
+    width: 24%;}
+}
+
+.buttonblock{
+    display: inline-block;
+    background-color: #E3170A;
+   padding: 0.3rem;
+     font-size: 1.4rem;
+     border-radius: 3px;
+  margin-top: 1rem;
+  width: 45%;
+  text-align: center;
+   gap: 20rem;
+    align-self: center;
+   @include bigger-text{
+       display: inline-block;
+       background-color: #E3170A;
+      padding: 1rem;
+        font-size: 2rem;
+        border-radius: 4px;
+     margin-top: 1rem;
+     align-self: center;
+     width: 40%;
+     text-align: center;
+      gap: 20rem;
+   }
+}
