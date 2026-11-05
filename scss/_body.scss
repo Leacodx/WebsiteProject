@@ -1,14 +1,15 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @mixin biggerbody {
    @media screen and (min-width: 840px){
        grid-auto-rows: auto 600px 370px auto ;
-
     @content;
-
 }}
 
 * {
   margin: 0;
   padding: 0;
+  font-family: Roboto, sans-serif;
   box-sizing: border-box;}
 
 body{
